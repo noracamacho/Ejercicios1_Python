@@ -1,8 +1,8 @@
 # Valide si una palabra o frase es palíndromo.
+    #reversedText = "".join(reversed(text))
 
 def palindromo(text):
-    text = text.replace(" ", "")
-    #reversedText = "".join(reversed(text))
+    text = text.replace(" ", "").lower()
     if text == "".join(reversed(text)):
         return True
     return False
