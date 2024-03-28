@@ -1,15 +1,13 @@
 
 def palindrome(text):
+    text = text.lower().replace(" ", "")
     tail = len(text) - 1
-    count = 0
-    for head in range(0, len(text) - 1):
+    for head in range(0, round((len(text) - 1)/2)):
         if(text[head] != text[tail]):
-            count += 1
+            return False
         tail -= 1
-    if(count == 0): 
-        print('La palabra o frase', text, 'es palindromo')
-    else:
-        print('La palabra o frase', text, 'no es palindromo')
+    return True
 
-palindrome('aronnoras')
+frase = input('Ingresa la palabra o frase que deseas evaluar: ')
+print(f'La palabra o frase "{frase}"', 'es palindromo' if (palindrome(frase) == True) else 'no es palindromo' )
 
