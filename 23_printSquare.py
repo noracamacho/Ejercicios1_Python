@@ -1,19 +1,31 @@
 
-def topBottom(side,bottom = False):
-    row = '\n' + '* ' * side + ('\n' if(bottom == True) else '')
-    return row
+def topBottom(side, bottom = False):
+    return '\n' + '* ' * side + ('\n' if(bottom == True) else '')
 
 def lats(side):
-    rows = ''
-    if(side - 2 > 0): rows += (('\n*' + '  ' * (side - 2) + ' *') * (side - 2))
-    return rows
+    return (('\n*' + '  ' * (side - 2) + ' *') * (side - 2))
 
 def createSquare(num):
-    if(num < 2): return 'El cuadrado debe contener al menos 2 caracteres por lado.\n'
-    square = topBottom(num)
-    square += lats(num)
-    square += topBottom(num, True)
-    return square
+    if(num < 2): 
+        return 'El cuadrado debe contener al menos 2 caracteres por lado.\n'
+    return topBottom(num) + lats(num) + topBottom(num, True)
 
 side = int(input('Ingresa el numero de caracteres que deseas que tenga de lado el cuadrado: '))
 print(createSquare(side))
+
+
+
+
+
+
+
+
+
+
+
+
+# def lats(side):
+    # rows = ''
+    # if(side - 2 > 0): 
+    #     rows += (('\n*' + '  ' * (side - 2) + ' *') * (side - 2))
+    # return rows
