@@ -12,20 +12,3 @@ def createSquare(num):
 
 side = int(input('Ingresa el numero de caracteres que deseas que tenga de lado el cuadrado: '))
 print(createSquare(side))
-
-
-
-
-
-
-
-
-
-
-
-
-# def lats(side):
-    # rows = ''
-    # if(side - 2 > 0): 
-    #     rows += (('\n*' + '  ' * (side - 2) + ' *') * (side - 2))
-    # return rows
